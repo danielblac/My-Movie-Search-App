@@ -1,0 +1,200 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    max-width: 550px;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+.header {
+    height: 13em;
+    width: 100%;
+    background: url(./image/movie-background.jpg);
+    background-size: cover;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2.5em;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding-top: 4em;
+    position: relative;
+}
+
+#watchlist-container {
+    padding-top: 2em;
+}
+
+.search-input {
+    width: 80%;
+    height: 2.7em;
+    background-color: #fff;
+    padding: 0 auto;
+    position: absolute;
+    top: -1.3em;
+    left: 9.5%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.4em;
+}
+
+.search-form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.search-form input, 
+.search-form button {
+    height: 100%;
+    border: none;
+}
+
+.search-form i {
+    padding: 0.5em;
+    color: #6B7280;
+}
+
+.search-form input {
+    flex: 1;
+    outline: none;
+}
+
+.search-form button {
+    width: 7em;
+    padding: 0.6em 1.5em;
+    cursor: pointer;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    color: #6B7280;
+}
+
+.explore {
+    width: 100%;
+    margin-top: 8em;
+    text-align: center;
+}
+
+.movie-container {
+    height: 100%;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.movie {
+    height: 9em;
+    display: flex;
+    gap: 1.3em;
+}
+
+.movie h3,.movie-sub {
+    color: black;
+}
+
+.movie-sub, .text {
+    margin-top: 0.7em;
+}
+
+.movie span {
+    font-size: 0.75rem;
+}
+
+.movie-sub {
+    display: flex;
+    gap: 2em;
+}
+
+.movie-sub i {
+    cursor: pointer;
+}
+
+.movie-image img {
+    height: 100%;
+    width: 6.3em;
+}
+
+.movie-info {
+    min-height: 100%;
+    width: 100%;
+    font-size: 0.875em;
+    margin-top: 0.3em;
+}
+
+.movie-info .text {
+    line-height: 1.4;
+    max-height: calc(2.7 * 0.875rem * 1.4);
+    overflow: hidden;
+}
+
+.expand-btn {
+    appearance: none;
+    padding: 0.3em;
+    cursor: pointer;
+    margin: 0;
+    color: #6B7280
+}
+
+.expand-btn::before {
+    content: 'Read more...';
+}
+
+.expand-btn:checked::before {
+    content: 'Collapse';
+}
+
+.text:has(+ .expand-btn:checked) {
+    max-height: none;
+}
+
+hr {
+    margin: 1.3em auto ;
+}
+
+.no-result {
+    font-size: 1.125rem;
+    margin-top: 9em;
+    text-align: center;
+    color: #DFDDDD;
+}
+
+.empty-watchlist {
+    display: block;
+    text-align: center;
+    margin-top: 10em;
+}
+
+.empty-watchlist p {
+    margin-bottom: 1em;
+    font-size: 1.125rem;    
+}
+
+.empty-watchlist a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875rem;
+}
+
+.added-movie {
+    font-weight: bold;
+}
